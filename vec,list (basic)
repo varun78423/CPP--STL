@@ -1,0 +1,58 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+bool comp(const pair<int,int>&a , const pair<int,int> &b){
+	return a.second < b.second;
+	//if(a.first == b.first) return a.second < b.second;
+}
+int main()
+{	
+	vector<int> A,V(100,-1);
+	//vector<int>::iterator ptr,arr,res;
+	list<int> B;
+	// int n;
+	// cin>>n;
+	// vector<int> d(n);
+	// for(int i=0 ;i<n ; i++) cin>>d[i];
+	// sort(A.begin(),A.end());
+	// sort(A.begin(),A.end(),greater<int>());
+	A.push_back(10);
+	A.push_back(10);
+	A.push_back(20);
+	A.insert(A.begin()+3,30);
+	//A.erase(A.begin()+2);
+	for(int i=0 ; i<A.size() ; i++) cout<<A[i]<<" ";
+	cout<<endl;
+	//V.assign(5,10);
+
+	B.push_back(10);
+	//B.pop_back();
+	B.push_front(20);
+	//for(auto i=B.begin() ; i!=B.end() ; i++) cout<<*i<<" ";
+	//cout<<B.back();  // B.front();
+
+
+
+	// vector<vector<int>> grid(5,vector<int>(5,10));
+	// grid.push_back({10,20,30,40,50});
+	// for(int i=0 ; i<6 ; i++){
+	// 	for(int j=0 ; j<5 ; j++){
+	// 		cout<<grid[i][j]<<" ";
+	// 	}
+	// 	cout<<endl;
+	// }
+
+	pair<int,int>p(10,20);
+	vector<pair<int,int>> vp;
+	vp.push_back({10,20});
+	vp.push_back({1,19});
+	vp.push_back({2,18});
+	vp.push_back({10,12});
+	//sort(vp.begin(),vp.end());
+	sort(vp.begin(),vp.end(),comp);
+	for(auto it: vp){
+		cout<<it.first<<" "<<it.second<<endl;
+	}
+	//sort(vp.begin(),vp.end(),comp);
+	
+}
