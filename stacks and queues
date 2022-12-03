@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	// stack,queue,priority queue ,deque
+	stack<int> st; // dfs
+	st.push(10);
+	st.push(20);
+	//cout<<st.top();
+	st.pop();
+	st.empty();
+	st.size(); // no erase as it not a stack property
+
+	queue<int> qu; //bfs
+	qu.push(20);
+	qu.push(40);
+	qu.push(60);
+	cout<<qu.front()<<" "; // front element 
+	cout<<qu.back()<<endl;
+	qu.pop();
+	qu.empty();
+	qu.size();
+
+	deque<int> dqu;
+	dqu.push_back(20);
+	dqu.push_front(10);
+	dqu.push_back(30);
+	dqu.pop_front();
+	dqu.pop_back();
+	dqu.push_back(40);//[20,40]
+	cout<<dqu.front()<<" ";
+	cout<<dqu.back()<<endl;
+	dqu.size();
+	dqu.empty();
+
+
+	priority_queue<int> pq; // min and max heap
+	pq.push(20);
+	pq.push(30);
+	pq.push(10);
+	//cout<<pq.top(); // 30
+	//pq.pop();
+	while(!pq.empty()){       // max heap
+		cout<<pq.top()<<" ";  //[30,20,10]
+		pq.pop();
+	}
+	cout<<endl;
+	// to get min heap (-1*)---> if all are positives
+	// so better use min heap in declaration
+
+	priority_queue<int,vector<int>,greater<int>> pqq; // min heap
+	pqq.push(20);
+	pqq.push(30);
+	pqq.push(10);
+	while(!pqq.empty()){
+		cout<<pqq.top()<<" "; //[10,20,30]
+		pqq.pop();
+	}
+	cout<<endl;
+}
