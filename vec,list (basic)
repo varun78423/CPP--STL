@@ -7,6 +7,14 @@ bool comp(const pair<int,int>&a , const pair<int,int> &b){
 }
 int main()
 {	
+	vector<int> A{1,1,1,0,1,1,0,0,0,0};
+	A.erase(A.begin()+1);
+	string s="fdj";
+	s.erase(0,1);
+	cout<<s<<endl;
+	for(auto it:A) cout<<it<<" ";
+	
+	
 	vector<int> A,V(100,-1);
 	//vector<int>::iterator ptr,arr,res;
 	list<int> B;
