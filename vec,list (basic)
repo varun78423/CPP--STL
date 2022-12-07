@@ -11,6 +11,7 @@ int main()
 	A.erase(A.begin()+1);
 	string s="fdj";
 	s.erase(0,1);
+	s.erase(s.begin()+1);
 	cout<<s<<endl;
 	for(auto it:A) cout<<it<<" ";
 	
