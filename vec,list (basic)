@@ -8,7 +8,8 @@ bool comp(const pair<int,int>&a , const pair<int,int> &b){
 int main()
 {	
 	vector<int> A{1,1,1,0,1,1,0,0,0,0};
-	A.erase(A.begin()+1);
+	A.erase(A.begin()+1);// erases a particular element
+	A.insert(A.begin()+1,10);// inserts at 1st position
 	string s="fdj";
 	s.erase(0,1);
 	s.erase(s.begin()+1);
